@@ -1,0 +1,61 @@
+<section class="signup-body">
+  <div class="signup-platform">
+    <form [formGroup]="profileForm" (ngSubmit)="submitData()" class="inner-div" novalidate>
+      <img src="../assets/images/image 17.png" alt="Logo" class="img-fluid mb-4" />
+      <p>Ultimate solution for effective team collaboration</p>
+      <h1>Sign in with email address</h1>
+
+      <div class="in-above">
+        <!-- Full Name -->
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" placeholder="Anthony Johnson" formControlName="name" />
+        <span *ngIf="name?.touched && name?.hasError('required')">This is a required field</span>
+
+        <!-- Email -->
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="example@mail.com" formControlName="email" />
+        <span *ngIf="email?.touched && email?.hasError('required')">This is a required field</span>
+        <span *ngIf="email?.touched && email?.hasError('email')">Enter a valid email address</span>
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input
+            type="password"
+            formControlName="password"
+            placeholder="Enter password"
+          />
+        </div>
+
+                        <div class="password-requirements">
+                    <span *ngIf="password?.touched && password?.hasError('required')">
+                      <img src="../../../../assets/images/mark.svg" alt="!" />This is a required field
+                    </span>
+                    <span *ngIf="password?.touched && password?.hasError('lowercase')">
+                      <img src="../../../../assets/images/mark.svg" alt="!" />Must include a lowercase letter
+                    </span>
+                    <span *ngIf="password?.touched && password?.hasError('uppercase')">
+                      <img src="../../../../assets/images/mark.svg" alt="!" />Must include an uppercase letter
+                    </span>
+                    <span *ngIf="password?.touched && password?.hasError('number')">
+                      <img src="../../../../assets/images/mark.svg" alt="!" />Must include a number
+                    </span>
+                    <span *ngIf="password?.touched && password?.hasError('special')">
+                      <img src="../../../../assets/images/mark.svg" alt="!" />Must include a special character
+                    </span>
+                    <span *ngIf="password?.touched && password?.hasError('minLength')">
+                      <img src="../../../../assets/images/mark.svg" alt="!" />Must be at least 8 characters
+                    </span>
+                  </div>
+
+        <!-- Submit -->
+        <div class="button-class">
+          <button id="signup-bttn" type="submit" >Sign Up</button>
+        </div>
+
+        <!-- Log in link -->
+        <p>Already have an account? <a routerLink="/login">Log in</a></p>
+      </div>
+    </form>
+  </div>
+</section>

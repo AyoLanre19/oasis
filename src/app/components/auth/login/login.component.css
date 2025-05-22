@@ -1,0 +1,149 @@
+.login-body {
+  background-color: whitesmoke;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-platform {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.inner-div {
+  padding: 1.5rem;
+}
+
+.inner-div img {
+  display: block;
+  margin: 0 auto 1.25rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.inner-div p {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6B6C7E;
+  text-align: center;
+}
+
+.inner-div h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #546FFF;
+  text-align: center;
+}
+
+.in-above {
+  padding-top: 2rem;
+}
+
+label.email,
+label.password {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #393A4A;
+  padding-left: 0.5rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #F5F5F5;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+#password {
+  border-color: #546FFF;
+  font-weight: 600;
+}
+
+.password {
+  color: #00000099;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.button-class {
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#singn-in-bttn,
+#create-account-bttn {
+  height: 3.4rem;
+  width: 100%;
+  border: none;
+  border-radius: 4.69px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#singn-in-bttn {
+  background-color: #546FFF;
+  color: white;
+}
+
+#create-account-bttn {
+  background-color: #E9E9FC;
+  color: #000;
+}
+
+.in-above p {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #393A4A;
+  text-align: center;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .inner-div {
+    padding: 1rem;
+  }
+
+  .inner-div h1 {
+    font-size: 1rem;
+  }
+
+  .inner-div p {
+    font-size: 0.9rem;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  #singn-in-bttn,
+  #create-account-bttn {
+    height: 3rem;
+    font-size: 0.9rem;
+  }
+
+  .password {
+    font-size: 0.8rem;
+  }
+}
